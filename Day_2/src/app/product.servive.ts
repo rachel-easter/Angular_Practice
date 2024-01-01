@@ -15,7 +15,7 @@ export class ProductService {
       picture: 'product1.jpg',
       reviews: ['Great product!', 'Good quality.'],
     },
-    // Add more products...
+
   ];
 
   getProducts(): Product[] {
