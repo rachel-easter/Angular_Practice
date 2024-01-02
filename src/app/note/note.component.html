@@ -1,0 +1,17 @@
+<div>
+    <input [(ngModel)]="newNote" placeholder="Add a new note" />
+    <button (click)="addNote()">Add</button>
+  </div>
+  
+  <ul>
+    <li *ngFor="let note of notes; let i = index">
+      <span>{{ note }}</span>
+      <span class="timestamp">Created: {{ noteTimestamps[i].created | date:'short' }}</span>
+      <span class="timestamp" *ngIf="noteTimestamps[i]?.updated">Updated: {{ noteTimestamps[i].updated | date:'short' }}</span>
+      
+      <input [(ngModel)]="notes[i]" />
+      <button (click)="updateNote(i, notes[i])">Update</button>
+      <button (click)="deleteNote(i)">Delete</button>
+    </li>
+  </ul>
+  
