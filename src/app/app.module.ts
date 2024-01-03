@@ -1,22 +1,20 @@
-// src/app/app.module.ts
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { CurrencyService } from './currency.service';
-
+import { NoteComponent } from './note/note.component';
+import { NoteService } from './note.service';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NoteComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpClientModule
+    FormsModule
   ],
-  providers: [CurrencyService],
+  providers: [NoteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
